@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+form {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #333; /* Fundo do formulário mais escuro */
+    
+}
+
+label, input, select, textarea {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    color: #fff; /* Texto branco */
+    background-color: #222; /* Fundo dos inputs */
+    border: 1px solid #555; /* Borda dos inputs */
+    padding: 8px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    display: inline;
+    width: auto;
+    margin-right: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+body {
+    /* height: 100vh; */
+    box-sizing: border-box;
+    background-color:  #000000;
+    color: var #F6F6F6;
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 15%;
+    margin-bottom: 50px; 
+}
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+    
+}
+
+.cabecalho__menu__link {
+    font-family:'Montserrat', sans-serif;;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #22D4FD;
+    text-decoration: none;
+}
+
+form h2 {
+    color: #fff; /* Define a cor do texto para branco */
+}
+
+.cor_texto{
+    color: #fff; 
+}

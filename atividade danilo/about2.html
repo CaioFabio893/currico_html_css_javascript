@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caio Fabio</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__link" href="index.html">Sobre mim</a>
+            <a class="cabecalho__menu__link" href="about.html">Currículo</a>
+            <a class="cabecalho__menu__link" href="about2.html">Formulário</a>
+        </nav>
+    </header>
+    <form id="freelancerForm">
+        <h2>Formulário </h2>
+
+        <label for="nome">Nome *</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="sobrenome">Sobrenome *</label>
+        <input type="text" id="sobrenome" name="sobrenome" required>
+
+        <label for="telefone">Telefone *</label>
+        <input type="text" id="telefone" name="telefone" placeholder="(99)99999-9999" required>
+
+        <label for="email">E-mail *</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensagem">Mensagem *</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
+
+        <label for="lingua">Língua</label>
+        <select id="lingua" name="lingua">
+            <option value="pt-br">Português (pt-br)</option>
+            <option value="en">Inglês (en)</option>
+            <option value="es">Espanhol (es)</option>
+        </select>
+
+        <label for="prototipo">Protótipo (Requisitos)</label>
+        <input type="file" id="prototipo" name="prototipo">
+
+        <label for="linguagens">As linguagens que você prefere?</label>
+        <select id="linguagens" name="linguagens" multiple>
+            <option value="java">Java</option>
+            <option value="c">C</option>
+            <option value="cpp">C++</option>
+            <option value="php">PHP</option>
+        </select>
+
+        <label>Banco de Dados</label>
+        <div class="cor_texto">
+        <input type="radio" name="banco_dados" value="MySQL" checked> MySQL
+        <input type="radio" name="banco_dados" value="PostgreSQL"> PostgreSQL
+        <input type="radio" name="banco_dados" value="MongoDB"> MongoDB
+        <input type="radio" name="banco_dados" value="N/A"> N/A
+        <input type="radio" name="banco_dados" value="Outro"> Outra
+        </div>
+        <label>Turno para Reuniões *</label>
+        <div class="cor_texto">
+        <input type="checkbox" name="turno" value="manha"> Manhã
+        <input type="checkbox" name="turno" value="tarde"> Tarde
+        <input type="checkbox" name="turno" value="noite"> Noite
+        </div>
+        <label for="horario">Horário Sugerido</label>
+        <input type="time" id="horario" name="horario">
+
+        <label for="dataEntrega">Data Prevista de Entrega *</label>
+        <input type="date" id="dataEntrega" name="dataEntrega" required>
+
+        <div class="buttons">
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+        </div>
+    </form>
+
+    <script>
+        // JavaScript para validação do formulário
+        document.getElementById('freelancerForm').addEventListener('submit', function(event) {
+            const nome = document.getElementById('nome').value;
+            const sobrenome = document.getElementById('sobrenome').value;
+            const telefone = document.getElementById('telefone').value;
+            const email = document.getElementById('email').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const dataEntrega = document.getElementById('dataEntrega').value;
+
+            if (!nome || !sobrenome || !telefone || !email || !mensagem || !dataEntrega) {
+                alert('Por favor, preencha todos os campos obrigatórios.');
+                event.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>
